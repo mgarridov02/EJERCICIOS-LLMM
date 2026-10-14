@@ -1,17 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IES Augustobriga</title>
-    <meta name="description" content="Página web del IES Augustobriga"/>
-    <link rel="stylesheet" href="./css/estilos.css"/>
-
+    <link rel="icon" href="./imagenes/logoaugustobriga1.png" type="image/png"/>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <header>
+        <figure>
+        <img src="./imagenes/logoaugustobriga1.png" width="150" height="150" alt="Logotipo de IES Augustobriga">
+        <figcaption> Logo IES Augustobriga</figcaption>
+        </figure>
+        <h1>IES Augustobriga</h1>
+    </header>
+    <nav>
+        <a href="#noticias">Noticias</a>
+        <a href="#actividades">| Actividades</a>
+        <a href="https://www.educarex.es/fp.html" target="_blank" title="Portal de Educación">| Contacto</a>
+    </nav>
 </head>
 <body>
-    <header><h1>IES Augustobriga</h1></header>
-    <nav>Inicio | Noticias | Contacto</nav>
     <main>
+        <br><br><br><br><br>
+        <table id="tabla">
+            <caption><h1>Referencias aplicadas a Don Quijote</h1></caption>
+            <colgroup>
+            <col>
+            <col>
+            <col>
+            </colgroup>
+            <thead>
+                <tr class="resaltado"><th>Parte</th><th>Nombre</th><th>Comentario</th></tr>
+            </thead>
+            <tbody>
+                <tr class="primera"><td>Primera</td><td>Don Quijote</td><td>Ideado por el mismo</td></tr>
+                <tr class="segunda"><td>Segunda</td><td>Caballero de los Leones</td><td>Apelativo creado por don Quijote</td></tr>
+            </tbody>
+            <tfoot class="preferencias">
+                <tr><th colspan="2">Total Referencias</th><th>2</th></tr>
+            </tfoot>
+        </table>
+        <br><br><br><br><br>
+        <table id="numeros">
+            <colgroup>
+                <col span="2">
+                <col>
+            </colgroup>
+            <thead>
+            <tr class="numero123"><th>Numero1</th><th>Numero2</th><th>Numero3</th></tr>
+            </thead>
+            <tr><td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+            
+        </table>
         <section id="noticias">
             <h2>Noticias</h2>
             <article id="Noticias1" class="noticia">
@@ -25,11 +74,31 @@
         </section>
         <section id="actividades">
             <h2>Actividades</h2>
+            <ul>
+                <li>Robótica</li>
+                <li>Teatro</li>
+                <li>Ajedrez</li>
+            </ul>
+
         </section>
+
     </main>
-    <aside>Proximos eventos</aside><br>
+    <aside>Proximos eventos</aside>
+    <ol type="a">
+        <li>Puertas abiertas</li>
+        <li>Entrega de notas</li>
+        <li>Fiesta Fin de Curso</li>
+    </ol>
+    <details>
+        <summary>Horario de secretaria</summary>
+        <p>Lunes a viernes, de 9:00 a 14:00</p>
+
+    </details>
+    <br>
     <footer>Curso 2026-27
         <address>Dirección:Antonio Concha,71-Navalmoral de la Mata</address>
     </footer>
+    <br><br><br><br><br>
 </body>
+
 </html>

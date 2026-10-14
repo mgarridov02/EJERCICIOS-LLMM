@@ -1,0 +1,26 @@
+#tabla, th, td{
+    border:1px solid black;
+}
+.resaltado{
+    color: rgb(1, 0, 14);
+    background-color: aquamarine;
+}
+.primera{
+    background-color: blanchedalmond;
+}
+.segunda{
+    background-color: rgb(167, 230, 230);
+}
+.preferencias{
+    background-color: aquamarine;
+}
+#numeros, th, td{
+    border: 1px solid black
+}
+.numero123{
+    background-color: orange;
+    color: white;
+}
+
+
+
