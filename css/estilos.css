@@ -1,12 +1,12 @@
 #tabla, th, td{
-    border:1px solid black;
+    border: 1px solid rgb(0, 0, 0);
 }
 .resaltado{
-    color: rgb(1, 0, 14);
+    color: rgb(0, 0, 0);
     background-color: aquamarine;
 }
 .primera{
-    background-color: blanchedalmond;
+    background-color: rgb(115, 209, 212);
 }
 .segunda{
     background-color: rgb(167, 230, 230);
@@ -21,3 +21,4 @@
     background-color: orange;
     color: white;
 }
+
