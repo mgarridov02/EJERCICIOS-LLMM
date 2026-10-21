@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./imagenes/icono.png" type="imagenes/png">
+    <title>Prueba Tabla</title>
+    <link rel="stylesheet" href="css/estilosprueba.css">
+</head>
+
+<body>
+    <table id="tabla">
+        <caption class="titulotabla">Referencias aplicadas a don Quijote</caption>
+        <colgroup>
+            <col>
+            <col span="2">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Parte</th>
+                <th>Nombre</th>
+                <th>Comentario</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Primera</td>
+                <td>Don Quijote de la Mancha</td>
+                <td>Ideado por él mismo</td>
+            </tr>
+            <tr>
+                <td>Segunda</td>
+                <td>Caballero de los Leones</td>
+                <td>Apelativo creado por don Quijote</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3">Total referencias</th>
+            </tr>
+        </tfoot>
+    </table>
+
+<br><br><br>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <td class="rojo" colspan="2"></td>
+                <td class="blanco"></td>
+                <td class="azul"></td>
+
+            </tr>
+            <tr>
+                <td class="amarillo" rowspan="2"></td>
+                <td class="blanco"></td>
+                <td class="rojo" colspan="2" rowspan="2"></td>
+            </tr>
+            <tr>
+                <td class="azul"></td>
+            </tr>
+            <tr>
+                <td class="rojo"></td>
+                <td class="blanco"></td>
+                <td class="amarillo"></td>
+                <td class="azul"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
