@@ -11,7 +11,7 @@
     <h1 style="text-align: center; color: blue;">Formularios</h1>
     <table style="border: 2px solid #050505; font-size: 20px; margin-left: auto; margin-right: auto;">
         <form action="manejador.html" enctype="multipart/form-data" method="post" name="formtipos" id="formulario">
-        </form>
+        
         <tr>
             <td>
                 <p><label for="nombre">Nombre: </label>
@@ -25,7 +25,7 @@
                 </p>
                 <p>
                     <label>
-                        <input type="radio" name="etapa" id="menos20" value="joven" checked>Menos 20 años
+                        <input type="radio" name="etapa" id="menos20" value="joven" form="formulario" checked>Menos 20 años
                     </label>
                 </p>
                 <p>
@@ -114,13 +114,14 @@
             </td>
         </tr>
         <tr>
-            <td>
+            <td style="text-align: center;">
                 <input type="submit" value="Enviar" id="enviar">
             </td>
-            <td>
-                <input type="reset" value="Reiniciar" id="Reiniciar" >
+            <td style="text-align: center;">
+                <input type="reset" value="Reiniciar" id="Reiniciar">
             </td>
         </tr>
+        </form>
     </table>
 
 
