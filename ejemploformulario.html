@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -17,10 +17,15 @@
                 <p><label for="nombre">Nombre: </label>
                     <input type="text" name="nombre" maxlength="20">
                 </p>
-
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <strong>Edad:</strong>
+                </p>
                 <p>
                     <label>
-                    <input type="radio" name="etapa" id="menos20" value="joven" checked>Menos 20 años
+                        <input type="radio" name="etapa" id="menos20" value="joven" checked>Menos 20 años
                     </label>
                 </p>
                 <p>
@@ -33,16 +38,87 @@
                         <input type="radio" name="etapa" id="41-60" value="maduro">Entre 41-60 años
                     </label>
                 </p>
-                 <p>
+                <p>
                     <label>
                         <input type="radio" name="etapa" id="61-80" value="anciano">Entre 61-80 años
                     </label>
                 </p>
-                 <p>
+                <p>
                     <label>
                         <input type="radio" name="etapa" id="mas80" value="achacoso">Más de 80
                     </label>
                 </p>
+            </td>
+            <td>
+                <p>
+                    <strong>Aficiones: </strong>
+                </p>
+                <p>
+                    <label for="andarin">
+                        <input type="checkbox" name="andar" id="andarin" value="si" form="formulario">Senderismo</label>
+                </p>
+                <p>
+                    <label for="lector">
+                        <input type="checkbox" name="leer" id="lector" value="si" form="formulario">Lectura</label>
+                </p>
+                <p>
+                    <label for="turista">
+                        <input type="checkbox" name="turismo" id="turista" value="si" form="formulario">Turismo</label>
+                </p>
+                <p>
+                    <label for="cinefilo">
+                        <input type="checkbox" name="cine" id="cinefilo" value="si" form="formulario">Cine</label>
+                </p>
+                <p>
+                    <label for="fotografo">
+                        <input type="checkbox" name="fotografia" id="fotografo" value="si"
+                            form="formulario">Fotografía</label>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                <h3>Introduce la fecha:</h3>
+                </p>
+                <p><label for="fecha"><input type="date" name="fecha" id="fecha" value="2026-01-01"></label>
+
+                </p>
+            </td>
+            <td>
+                <p>
+                <h3>Selecciona color: </h3>
+                </p>
+                <p>
+                    <input type="color" name="colorido" id="color" value="#4e4e4e">
+
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                <h3>Rango de valores:</h3>
+                </p>
+                <p>
+                    <input id="rango" name="valoresrango" type="range" value="50" min="0" max="100" step="10">
+                </p>
+            </td>
+            <td>
+                <p>
+                <h3>Selecciona fichero:</h3>
+                </p>
+                <p>
+                    <input type="file" id="fichero" name="fichero" accept=".doc,.pdf,.docx">
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Enviar" id="enviar">
+            </td>
+            <td>
+                <input type="reset" value="Reiniciar" id="Reiniciar" >
             </td>
         </tr>
     </table>
