@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea1_2</title>
+</head>
+
+<body>
+    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">INDUSTRIAS EXTREMEÑAS S.A.</h1>
+    <form action="manejador.html" enctype="multipart/form-data" method="post" name="industrias" id="ejemploIndustria">
+    </form>
+    <table>
+        <tr>
+            <fieldset style="border: 2px solid black;">
+                <legend style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">FORMULARIO DE PEDIDO</legend>
+                <p style="font-size: large;"><strong>>Paso 1. Identificacion</strong></p>
+                <fieldset style="border: 2px solid black;">
+                    <legend>Datos del Cliente</legend>
+                    </p>
+                    <p><label for="nombre">Correo Electronico: </label>
+                        <input type="text" name="correo" minlength="6" required>
+                    </p>
+                    <p><label for="nombre">Contraseña: </label>
+                        <input type="text" name="contraseña" minlength="6" required>
+                    </p>
+                </fieldset>
+
+
+                <fieldset style="border: 2px solid;">
+                    <legend>Tipos de Cliente</legend>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="radio" name="etapa" id="particular" value="particulares"
+                                checked>Particulares</label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="radio" name="etapa" id="asociacion" value="asociaciones">Asociación</label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="radio" name="etapa" id="empresa" value="empresa">Empresa</label>
+                    </p>
+                </fieldset>
+                <p style="font-size: large;"><strong>>Paso 2. Pedido</strong></p>
+                <fieldset style="border: 2px solid black;">
+                    <legend>Datos del producto</legend>
+                    <p><label for="producto" style="font-size: large;">Producto</label></p>
+                    <select name="producto" id="productos">
+                        <optgroup label="Armaduras">
+                            <option value="1">ARRO1 Oro</option>
+                            <option value="2">ARR02 Plata</option>
+                            <option value="3">ARR03 Cobre</option>
+                        </optgroup>
+                        <optgroup label="Extras">
+                            <option value="4"></option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+        </tr>
+    </table>
+
+</body>
+
+</html>

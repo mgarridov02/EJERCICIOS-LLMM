@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo formulario</title>
+</head>
+
+<body>
+    <h1 style="text-align: center; color: blue;">Formularios</h1>
+    <table style="border: 2px solid #050505; font-size: 20px; margin-left: auto; margin-right: auto;">
+        <form action="manejador.html" enctype="multipart/form-data" method="post" name="formtipos" id="formulario">
+
+            <tr>
+                <td>
+                    <p><label for="nombre">Nombre: </label>
+                        <input type="text" name="nombre" maxlength="20">
+                    </p>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <strong>Edad:</strong>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="radio" name="etapa" id="menos20" value="joven" form="formulario" checked>Menos
+                            20 años
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="radio" name="etapa" id="20-40" value="adulto">Entre 20-40 años
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="radio" name="etapa" id="41-60" value="maduro">Entre 41-60 años
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="radio" name="etapa" id="61-80" value="anciano">Entre 61-80 años
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="radio" name="etapa" id="mas80" value="achacoso">Más de 80
+                        </label>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <strong>Aficiones: </strong>
+                    </p>
+                    <p>
+                        <label for="andarin">
+                            <input type="checkbox" name="andar" id="andarin" value="si"
+                                form="formulario">Senderismo</label>
+                    </p>
+                    <p>
+                        <label for="lector">
+                            <input type="checkbox" name="leer" id="lector" value="si" form="formulario">Lectura</label>
+                    </p>
+                    <p>
+                        <label for="turista">
+                            <input type="checkbox" name="turismo" id="turista" value="si"
+                                form="formulario">Turismo</label>
+                    </p>
+                    <p>
+                        <label for="cinefilo">
+                            <input type="checkbox" name="cine" id="cinefilo" value="si" form="formulario">Cine</label>
+                    </p>
+                    <p>
+                        <label for="fotografo">
+                            <input type="checkbox" name="fotografia" id="fotografo" value="si"
+                                form="formulario">Fotografía</label>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                    <h3>Introduce la fecha:</h3>
+                    </p>
+                    <p><label for="fecha"><input type="date" name="fecha" id="fecha" value="2026-01-01"></label>
+
+                    </p>
+                </td>
+                <td>
+                    <p>
+                    <h3>Selecciona color: </h3>
+                    </p>
+                    <p>
+                        <input type="color" name="colorido" id="color" value="#4e4e4e">
+
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                    <h3>Rango de valores:</h3>
+                    </p>
+                    <p>
+                        <input id="rango" name="valoresrango" type="range" value="50" min="0" max="100" step="10">
+                    </p>
+                </td>
+                <td>
+                    <p>
+                    <h3>Selecciona fichero:</h3>
+                    </p>
+                    <p>
+                        <input type="file" id="fichero" name="fichero" accept=".doc,.pdf,.docx">
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="texto">
+                        <h3>Escribe tu texto:
+                    </label>
+                    <br>
+                    <textarea name="cajatexto" id="micajatexto" rows="5" cols="20"></textarea>
+                </td>
+                <td>
+                    <label for="paises">
+                        <h3>Paises:
+                    </label>
+                    <br>
+                    <select name="pais" id="paises">
+                        <option value="es">España</option>
+                        <option value="pt">Portugal</option>
+                        <option value="fr">Francia</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>CONCESIONARIOS</legend>
+                        <p><label for="coches"><strong>Seleciona un coche:</strong></label></p>
+                        <p><select name="selcoches" id="coches">
+                                <optgroup label="Berlinas">
+                                    <option value="1">Volvo</option>
+                                    <option value="2">Mercedes</option>
+                                    <option value="3">Audi</option>
+                                </optgroup>
+                                <optgroup label="SUV">
+                                    <option value="4">Toyota Rav4</option>
+                                    <option value="5">Renault</option>
+                                    <option value="6">Mazda</option>
+                                </optgroup>
+                            </select></p>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">
+                    <input type="submit" value="Enviar" id="enviar">
+                </td>
+                <td style="text-align: center;">
+                    <input type="reset" value="Reiniciar" id="Reiniciar">
+                </td>
+            </tr>
+        </form>
+    </table>
+
+
+</body>
+
+</html>
