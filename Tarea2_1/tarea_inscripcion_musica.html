@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!--
+  TAREA UT2 · Formularios dentro de tablas
+  Escuela Municipal de Musica de Navalmoral de la Mata
+  Alumno/a: Mauro Garrido Victor
+  Completa los bloques marcados con TODO siguiendo el modelo de la seccion 1.
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ficha de inscripcion de la Escuela Municipal de Musica de Navalmoral de la Mata">
+  <title>Inscripcion · Escuela Municipal de Musica de Navalmoral de la Mata</title>
+
+  <!-- ESTILO PROPORCIONADO POR EL PROFESOR: NO ES NECESARIO MODIFICARLO -->
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f1ea;
+      color: #2b2b2b;
+      margin: 0;
+      padding: 20px;
+    }
+    header, footer {
+      text-align: center;
+    }
+    header h1 {
+      color: #7a1f2b;
+      margin-bottom: 4px;
+    }
+    header p {
+      margin-top: 0;
+      color: #555555;
+    }
+    table {
+      width: 900px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background-color: #ffffff;
+    }
+    caption {
+      font-size: 1.3em;
+      font-weight: bold;
+      padding: 10px;
+      color: #7a1f2b;
+    }
+    th, td {
+      border: 1px solid #c9b8a4;
+      padding: 8px;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f3e6d8;
+      text-align: left;
+      width: 22%;
+    }
+    th.seccion {
+      background-color: #7a1f2b;
+      color: #ffffff;
+      font-size: 1.1em;
+    }
+    tfoot td {
+      text-align: center;
+      background-color: #f3e6d8;
+    }
+    input[type="text"], input[type="email"], input[type="tel"],
+    input[type="date"], select, textarea {
+      width: 95%;
+      padding: 4px;
+      font-family: inherit;
+    }
+    button {
+      padding: 8px 20px;
+      margin: 4px;
+      font-size: 1em;
+    }
+    footer {
+      margin-top: 20px;
+      font-size: 0.85em;
+      color: #555555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Escuela Municipal de Música</h1>
+    <p>Navalmoral de la Mata · Ficha de inscripción de alumnado</p>
+  </header>
+
+  <main>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <table>
+        <caption>Inscripción · Curso 2026/2027</caption>
+
+        <!-- ========== 1. DATOS DEL ALUMNO/A (SECCIÓN DE EJEMPLO, YA RESUELTA) ========== -->
+        <tbody>
+          <tr>
+            <th colspan="4" class="seccion">1. Datos del alumno/a</th>
+          </tr>
+          <tr>
+            <th><label for="nombre">Nombre *</label></th>
+            <td><input type="text" id="nombre" name="nombre" required></td>
+            <th rowspan="3"><label for="foto">Fotografía</label></th>
+            <td rowspan="3">
+              <input type="file" id="foto" name="foto" accept="image/*">
+              <p>Tamaño carné, formato JPG o PNG.</p>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="apellidos">Apellidos *</label></th>
+            <td><input type="text" id="apellidos" name="apellidos" required></td>
+          </tr>
+          <tr>
+            <th><label for="nacimiento">Fecha de nacimiento *</label></th>
+            <td><input type="date" id="nacimiento" name="nacimiento" required></td>
+          </tr>
+          <tr>
+            <th><label for="telefono">Teléfono *</label></th>
+            <td><input type="tel" id="telefono" name="telefono" placeholder="600 000 000" pattern="[0-9]{9}" required></td>
+            <th><label for="correo">Correo electrónico</label></th>
+            <td><input type="email" id="correo" name="correo" placeholder="nombre@correo.es"></td>
+          </tr>
+          <tr>
+            <th><label for="direccion">Dirección</label></th>
+            <td colspan="3"><input type="text" id="direccion" name="direccion" placeholder="Calle, número, localidad"></td>
+          </tr>
+        </tbody>
+
+        <!-- ========== 2. DATOS DEL TUTOR LEGAL ========== -->
+        <tbody>
+          <tr>
+            <th colspan="4" class="seccion">2. Padre, madre o tutor legal (solo menores de edad)</th>
+          </tr>
+          <tr>
+            <th><label for="nombre">Nombre y apellidos*</label></th>
+            <td colspan="3"><input type="text" id="nombre" name="nombre" required></td>
+          </tr>
+          <tr>
+            <th><label for="telefono">Teléfono *</label></th>
+              <td><input type="text" name="telefono" id="telefono" placeholder="600 000 000" pattern="[0-9]{9}" maxlength="9" required></td>
+            <th><label for="parentesco">Parentesco </label></th>
+              <td><select name="selecciona" id="selecciona">
+                <option value="">--Selecciona--</option>
+                <option value="1">Madre</option>
+                <option value="2">Padre</option>
+                <option value="3">Tutor/a legal</option>
+              </select>
+              </td>
+            </tr>
+          
+        </tbody>
+          <!-- ========== 3. FORMACIÓN MUSICAL ========== -->
+        <tbody>
+          <tr>
+            <th colspan="4" class="seccion">3. Formación musical</th>
+          </tr>
+          <tr>
+            <th><label for="modalidad">Modalidad *</label></th>
+            <td colspan="3">
+              <input type="radio" name="musica" id="musymov" required>Musica y movimiento(4/7 años)
+              <br>
+              <input type="radio" name="musica" id="lengmus">Lenguaje musical
+              <br>
+              <input type="radio" name="musica" id="lengmus+ins">Lenguaje musical + instrumento
+              <br>
+              <input type="radio" name="musica" id="adulto">Adultos
+            </td>
+          </tr>
+          <tr>
+            <th><label for="instrumento">Instrumento</label></th>
+            <td><select name="instrumento" id="instrumento">
+               <option value="">--Ninguno--</option>
+              <optgroup label="Cuerda"></optgroup>
+                <option value="1">Violín</option>
+                <option value="2">Violonchelo</option>
+                <option value="3">Guitarra</option>
+              <optgroup label="Viento madera"></optgroup>
+                <option value="4">Flauta Travesera</option>
+                <option value="5">Clarinete</option>
+                <option value="6">Saxofón</option>
+              <optgroup label="Viento metal">
+                <option value="7">Trompeta</option>
+                <option value="8">Trombón</option>
+              </optgroup>
+              <optgroup label="Percusión y teclado">
+                <option value="9">Percusión</option>
+                <option value="10">Piano</option>
+              </optgroup>
+            </select>
+            </td>
+            <th><label for="años">Años de estudios previos</label></th>
+            <td><input type="number" name="años" id="año" placeholder="0"  min="0" max="15"></td>
+          </tr>
+          <tr>
+            <th><label for="propio">¿Tienes instrumento propio?</label></th>
+            <td>
+              <input type="radio" name="propio" id="si">Sí
+              <input type="radio" name="propio" id="no" checked>No
+            </td>
+            <th><label for="agrupaciones">Agrupaciones de interés</label></th>
+              <td>
+                <input type="checkbox" name="banda" id="banda">Banda municipal
+                <br>
+                <input type="checkbox" name="coro" id="coro">Coro
+                <br>
+                <input type="checkbox" name="orquesta" id="orquesta">Orquesta de cuerda
+                <br>
+                <input type="checkbox" name="combo" id="combo">Combo de música moderna
+              </td>
+          </tr>
+          <tr>
+            <th><label for="horario">Horario preferido</label></th>
+            <td colspan="3">
+              <input type="checkbox" name="dias" id="lunymier">Lunes y miercoles(tarde)
+              <input type="checkbox" name="dias" id="maryjue">Martes y jueves(tarde)
+              <br>
+              <input type="checkbox" name="dias" id="viernes">Viernes(tarde)
+              <input type="checkbox" name="dias" id="sabado">Sábado(mañana)
+            </td>
+          </tr>
+          <tr>
+            <th><label for="observaciones">Observaciones</label></th>
+            <td colspan="3"><textarea name="observaciones" id="observaciones" placeholder="Indica cualquier información que debamos conocer(necesidades especiales, alergías, etc.)" rows="4" maxlength="500"></textarea></td>
+            
+          </tr>
+    </tbody>
+      <!-- ========== 4. AUTORIZACIONES ========== -->
+    <tbody>
+      <tr>
+        <th colspan="4" class="seccion">4. Autorizaciones</th>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <input type="checkbox" name="aceptación" id="aceptacion" required>Aceptación del tratamiento de datos personales (OBLIGATORIA).
+        <br>
+          <input type="checkbox" name="autoriza" id="autoriza">Autorización para el uso de fotografías en audiciones y conciertos (opcional).
+        </td>
+      </tr>
+    </tbody>
+    <!-- ========== BOTONES ========== -->
+    <tfoot>
+      <td style="text-align: center;" colspan="4">
+        <button type="submit">Enviar inscripción</button>
+        <button type="reset">Borrar datos</button>
+      </td>
+      
+      
+    </tfoot>
+
+        
+        <!--
+          TODO 5 · Crea un <tfoot> con una fila y una celda que ocupe las 4 columnas, con dos botones:
+                   "Enviar inscripción" (envía el formulario) y "Borrar datos" (lo limpia).
+        -->
+      </table>
+    </form>
+  </main>
+
+  <footer>
+    <p>Los campos marcados con * son obligatorios.</p>
+    <p>Escuela Municipal de Música · Ayuntamiento de Navalmoral de la Mata</p>
+  </footer>
+
+</body>
+</html>
