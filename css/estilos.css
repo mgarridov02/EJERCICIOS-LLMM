@@ -1,3 +1,15 @@
+header {
+    font-size: 30px;
+}
+h2,h3{
+    color: red;
+}
+#noticias h2{
+    color: blue;
+}
+
+
+
 #tabla, th, td{
     border: 1px solid rgb(0, 0, 0);
     text-align: center;
