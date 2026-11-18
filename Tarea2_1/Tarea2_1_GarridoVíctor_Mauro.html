@@ -158,27 +158,29 @@
           <tr>
             <th><label for="modalidad">Modalidad *</label></th>
             <td colspan="3">
-              <input type="radio" name="musica" id="musymov" required>Musica y movimiento(4/7 años)
+              <input type="radio" name="musica" id="musymov" value="mys" required>Musica y movimiento(4/7 años)
               <br>
-              <input type="radio" name="musica" id="lengmus">Lenguaje musical
+              <input type="radio" name="musica" id="lengmus" value="lm">Lenguaje musical
               <br>
-              <input type="radio" name="musica" id="lengmus+ins">Lenguaje musical + instrumento
+              <input type="radio" name="musica" id="lengmus+ins" value="lm+i">Lenguaje musical + instrumento
               <br>
-              <input type="radio" name="musica" id="adulto">Adultos
+              <input type="radio" name="musica" id="adulto" value="adult">Adultos
             </td>
           </tr>
           <tr>
             <th><label for="instrumento">Instrumento</label></th>
             <td><select name="instrumento" id="instrumento">
                <option value="">--Ninguno--</option>
-              <optgroup label="Cuerda"></optgroup>
+              <optgroup label="Cuerda">
                 <option value="1">Violín</option>
                 <option value="2">Violonchelo</option>
                 <option value="3">Guitarra</option>
-              <optgroup label="Viento madera"></optgroup>
+              </optgroup>
+              <optgroup label="Viento madera">
                 <option value="4">Flauta Travesera</option>
                 <option value="5">Clarinete</option>
                 <option value="6">Saxofón</option>
+              </optgroup>
               <optgroup label="Viento metal">
                 <option value="7">Trompeta</option>
                 <option value="8">Trombón</option>
@@ -195,8 +197,8 @@
           <tr>
             <th><label for="propio">¿Tienes instrumento propio?</label></th>
             <td>
-              <input type="radio" name="propio" id="si">Sí
-              <input type="radio" name="propio" id="no" checked>No
+              <input type="radio" name="propio" id="si" value="si">Sí
+              <input type="radio" name="propio" id="no" value="no" checked>No
             </td>
             <th><label for="agrupaciones">Agrupaciones de interés</label></th>
               <td>
