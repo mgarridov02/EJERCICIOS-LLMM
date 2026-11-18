@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!--
+  EXAMEN UT2 · Formularios dentro de tablas
+  Escuelas Deportivas Municipales de Navalmoral de la Mata
+  Alumno/a: MAURO GARRIDO VÍCTOR
+  Completa los bloques marcados con TODO siguiendo el modelo de la sección 1
+  y las indicaciones del documento del examen.
+-->
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Ficha de inscripción en las Escuelas Deportivas Municipales de Navalmoral de la Mata">
+  <title>Inscripción · Escuelas Deportivas Municipales de Navalmoral de la Mata</title>
+
+  <!-- ESTILO PROPORCIONADO POR EL PROFESOR: NO ES NECESARIO MODIFICARLO -->
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #eef3ee;
+      color: #2b2b2b;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header,
+    footer {
+      text-align: center;
+    }
+
+    header h1 {
+      color: #1d5c3a;
+      margin-bottom: 4px;
+    }
+
+    header p {
+      margin-top: 0;
+      color: #555555;
+    }
+
+    table {
+      width: 900px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background-color: #ffffff;
+    }
+
+    caption {
+      font-size: 1.3em;
+      font-weight: bold;
+      padding: 10px;
+      color: #1d5c3a;
+    }
+
+    th,
+    td {
+      border: 1px solid #a9c4b0;
+      padding: 8px;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #dcebdf;
+      text-align: left;
+      width: 22%;
+    }
+
+    th.seccion {
+      background-color: #1d5c3a;
+      color: #ffffff;
+      font-size: 1.1em;
+    }
+
+    tfoot td {
+      text-align: center;
+      background-color: #dcebdf;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 95%;
+      padding: 4px;
+      font-family: inherit;
+    }
+
+    button {
+      padding: 8px 20px;
+      margin: 4px;
+      font-size: 1em;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 0.85em;
+      color: #555555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Escuelas Deportivas Municipales</h1>
+    <p>Navalmoral de la Mata · Ficha de inscripción de deportistas</p>
+  </header>
+
+  <main>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <table>
+        <caption>Inscripción · Temporada 2026/2027</caption>
+
+        <!-- ========== 1. DATOS DEL DEPORTISTA (SECCIÓN DE EJEMPLO, YA RESUELTA) ========== -->
+        <tbody>
+          <tr>
+            <th colspan="4" class="seccion">1. Datos del deportista</th>
+          </tr>
+          <tr>
+            <th><label for="nombre">Nombre *</label></th>
+            <td><input type="text" id="nombre" name="nombre" required></td>
+            <th rowspan="3"><label for="foto">Fotografía</label></th>
+            <td rowspan="3">
+              <input type="file" id="foto" name="foto" accept="image/*">
+              <p>Tamaño carné, formato JPG o PNG.</p>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="apellidos">Apellidos *</label></th>
+            <td><input type="text" id="apellidos" name="apellidos" required></td>
+          </tr>
+          <tr>
+            <th><label for="nacimiento">Fecha de nacimiento *</label></th>
+            <td><input type="date" id="nacimiento" name="nacimiento" required></td>
+          </tr>
+          <tr>
+            <th><label for="telefono">Teléfono *</label></th>
+            <td><input type="tel" id="telefono" name="telefono" placeholder="600 000 000" pattern="[0-9]{9}" required>
+            </td>
+            <th><label for="correo">Correo electrónico</label></th>
+            <td><input type="email" id="correo" name="correo" placeholder="nombre@correo.es"></td>
+          </tr>
+          <tr>
+            <th><label for="direccion">Dirección</label></th>
+            <td colspan="3"><input type="text" id="direccion" name="direccion" placeholder="Calle, número, localidad">
+            </td>
+          </tr>
+        </tbody>
+
+        <!-- ========== 2. CONTACTO DE EMERGENCIA ========== -->
+        <tbody>
+          <tr>
+            <th colspan="4" class="seccion">2. Contacto en caso de emergencia</th>
+          </tr>
+          <tr>
+            <th><label for="contacto">Persona de contacto *</label></th>
+            <td colspan="3"><input type="text" name="contacto" id="contact" required></td>
+          </tr>
+          <tr>
+            <th><label for="telefono">Teléfono *</label></th>
+            <td><input type="tel" name=" telefono" id="telefono" pattern="[0-9]{9}" required></td>
+            <th><label for="relacion">Relación *</label></th>
+            <td><select name="relacion" id="relacion" required>
+                <option value="">--Selecciona----</option>
+                <option value="1">Madre</option>
+                <option value="2">Padre</option>
+                <option value="3">Tutor/a Legal</option>
+                <option value="4">Otro familiar</option>
+              </select>
+          </tr>
+        </tbody>
+
+        <!-- ========== 3. ACTIVIDAD DEPORTIVA ========== -->
+        <tbody>
+          <tr>
+            <th colspan="4" class="seccion">3. Actividad deportiva</th>
+          </tr>
+          <tr>
+            <th><label for="deporte">Deporte *</label></th>
+            <td><select name="deportes" id="deporte" required>
+                <option value="">---Selecciona---</option>
+                <optgroup label="Deportes de equipo">
+                  <option value="1">Fútbol Sala</option>
+                  <option value="2">Baloncesto</option>
+                  <option value="3">Voleibol</option>
+                  <option value="4">Balonmano</option>
+                </optgroup>
+                <optgroup label="Deportes de raqueta">
+                  <option value="5">Tenis</option>
+                  <option value="6">Padél</option>
+                  <option value="7">Bádminton</option>
+                </optgroup>
+                <optgroup label="Deportes individuales">
+                  <option value="8">Atletismo</option>
+                  <option value="9">Natación</option>
+                  <option value="10">Judo</option>
+                </optgroup>
+              </select></td>
+            <th><label for="años_práctica">Años de práctica</label></th>
+            <td><input type="number" name="año" id="año" min="0" max="20" value="0"></td>
+          </tr>
+          <tr>
+            <th rowspan=""><label for="nivel">Nivel *</label></th>
+            <td rowspan=""></label>
+              <input type="radio" name="nivel" id="inicial" value="inc" required>Iniciación
+              <br>
+              <input type="radio" name="nivel" id="medio" value="med">Medio
+              <br>
+              <input type="radio" name="nivel" id="avanzado" value="avanz">Avanzado
+            </td>
+            <th rowspan="2"><label for="observaciones">Observaciones médicas</label></th>
+            <td rowspan="2"><textarea name="observaciones" id="observ" rows="5" maxlength="300"
+                placeholder="Alergías, lesiones o tratamientos que el monitor debe conocer"></textarea></td>
+          </tr>
+          <tr>
+            <th><label for="competir">¿Has competido antes?</label></th>
+            <td>
+              <input type="radio" name="competir" id="si">Sí
+              <input type="radio" name="competir" id="no" checked>No
+            </td>
+          </tr>
+          <tr>
+            <th> <label for="dias">Días de entrenamiento</label></th>
+            <td colspan="3">
+              <input type="checkbox" name="dias" id="lunes" value="lunes">Lunes
+              <input type="checkbox" name="dias" id="martes" value="martes">Martes
+              <input type="checkbox" name="dias" id="miercoles" value="miercoles">Miercoles
+              <input type="checkbox" name="dias" id="jueves" value="jueves">Jueves
+              <input type="checkbox" name="dias" id="viernes" value="viernes">Viernes
+            </td>
+          </tr>
+          <tr>
+            <th><label for="talla">Talla de camiseta</label></th>
+            <td><select name="talla" id="talla">
+                <option value="">---Selecciona---</option>
+                <option value="8">8</option>
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+            </td>
+            <th><label for="fecha"></label> Fecha de incio *</th>
+            <td><input type="date" name="fecha" id="fecha" required></td>
+          </tr>
+        </tbody>
+
+        <!-- ========== 4. AUTORIZACIONES ========== -->
+        <tbody>
+          <tr>
+            <th colspan="4" class="seccion">4. Autorizaciones</label></th>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <input type="checkbox" name="datos" id="dato" value="acept" required>He leído y acepto el tratamiento de mis datos personales por parte del Ayuntamiento. *
+              <br>
+              <input type="checkbox" name="declaracion" id="declara"  value="declar" required>Declaro que el deportista no padece ninguna enfermedad que le impide practicar depporte. *
+              <br>
+              <input type="checkbox" name="autoricacion" id="autoriza" value="autoriz">Autorizo el uso de fotografías tomadas en el entrenamiento y competiciones.
+            
+            </td>
+          </tr>
+        </tbody>
+        <!-- ========== BOTONES ========== -->
+        <tfoot>
+         <th style="text-align: center;" colspan="4">
+          <button type="submit">Enviar </button>
+          <button type="reset">Borrar Datos</button>
+         </th>
+
+
+
+        </tfoot>
+      </table>
+    </form>
+  </main>
+
+  <footer>
+    <p>Los campos marcados con * son obligatorios.</p>
+    <p>Concejalía de Deportes · Ayuntamiento de Navalmoral de la Mata</p>
+  </footer>
+
+</body>
+
+</html>
