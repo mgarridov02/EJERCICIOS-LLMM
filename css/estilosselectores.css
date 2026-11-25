@@ -1,0 +1,66 @@
+*{
+    font-size: 14px;
+}
+
+header{
+    font-size: 60px;
+    color: blue;
+}
+
+h2 + p{
+    font-size: 48px;
+    color: #f839ee;
+}
+
+h1, footer{
+    font-size: 36px;
+    color: rgb(8, 36, 219);
+}
+
+section p{
+    font-size: 36px;
+    color: rgb(255, 153, 0);
+}
+
+main p{
+    font-size: 24+x-large;
+    color: rgb(20, 188, 37);
+}
+
+h3 ~ p{
+    font-size: 30px;
+    color: rgb(227, 109, 192);
+}
+
+.fondogris{
+    background-color: rgb(183, 204, 204);
+}
+
+#cabeceraprincipal{
+    color: chocolate;
+    font-size: 25px;
+}
+
+p[name]{
+    font-size: 15px;
+}
+
+p[name="pcabecera"]{
+    color: crimson;
+}
+
+p[name~="par"]{
+    color: rgb(166, 26, 242);
+}
+
+p[name^="pm"]{
+    color: goldenrod;
+}
+
+p[name$="al"]{
+    color: darkslategrey;
+}
+
+p[name*="fin"]{
+    color: darkorange;
+}
